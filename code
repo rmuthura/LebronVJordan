@@ -1,0 +1,372 @@
+#Reading datasets
+lebron = read.csv('/Users/ram/Downloads/archive (2)/lebron_career.csv')
+jordan =  read.csv('/Users/ram/Downloads/archive (2)/jordan_career.csv')
+head(jordan)
+head(lebron)
+dim(jordan)
+dim(lebron)
+
+#Points
+combined_data = data.frame(
+  pts = c(lebron$pts, jordan$pts),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(pts ~ player, data = combined_data, 
+        main = "Comparison of Points Scored: LeBron vs. Jordan",
+        xlab = "Player", ylab = "Points Scored", col = c("red", "purple"))
+
+summary(lebron$pts)
+sum(lebron$pts)
+mean(lebron$pts)
+
+summary(jordan$pts)
+sum(jordan$pts)
+mean(jordan$pts)
+
+
+#Assists
+combined_data = data.frame(
+  ast = c(lebron$ast, jordan$ast),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(ast ~ player, data = combined_data, 
+        main = "Comparison of Assists: LeBron vs. Jordan",
+        xlab = "Player", ylab = "Assists Made", col = c("red", "purple"))
+
+summary(lebron$ast)
+sum(lebron$ast)
+mean(lebron$ast)
+
+summary(jordan$ast)
+sum(jordan$ast)
+mean(jordann$ast)
+
+#Rebounds
+combined_data = data.frame(
+  trb = c(lebron$trb, jordan$trb),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(trb ~ player, data = combined_data, 
+        main = "Comparison of Rebounds: LeBron vs. Jordan",
+        xlab = "Player", ylab = "Rebounds", col = c("red", "purple"))
+
+summary(lebron$trb)
+sum(lebron$trb)
+mean(lebron$trb)
+
+summary(jordan$trb)
+sum(jordan$trb)
+mean(jordann$trb)
+
+#FGP
+combined_data = data.frame(
+  fgp = c(lebron$fgp, jordan$fgp),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(fgp ~ player, data = combined_data, 
+        main = "Comparison of Field Goal Percentage: LeBron vs. Jordan",
+        xlab = "Player", ylab = "FGP%", col = c("red", "purple"))
+
+summary(lebron$fgp)
+mean(lebron$fgp, na.rm = TRUE)
+
+summary(jordan$fgp)
+mean(jordan$fgp, na.rm = TRUE)
+
+
+#Threes made
+combined_data = data.frame(
+  three = c(lebron$three, jordan$three),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(three ~ player, data = combined_data, 
+        main = "Comparison of Threes Made: LeBron vs. Jordan",
+        xlab = "Player", ylab = "Threes Made", col = c("red", "purple"))
+
+summary(lebron$three)
+sum(lebron$three)
+mean(lebron$three)
+summary(jordan$three)
+sum(jordan$three)
+mean(jordan$three)
+
+#Game Score
+combined_data = data.frame(
+  game_score = c(lebron$game_score, jordan$game_score),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(game_score ~ player, data = combined_data, 
+        main = "Comparison of Game Score: LeBron vs. Jordan",
+        xlab = "Player", ylab = "Game Score", col = c("red", "purple"))
+
+summary(lebron$game_score)
+mean(lebron$game_score)
+
+summary(jordan$game_score)
+mean(jordan$game_score)
+
+#Field Goals Made
+combined_data = data.frame(
+  fgm = c(lebron$fg, jordan$fg),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(fgm ~ player, data = combined_data, 
+        main = "Comparison of Field Goals Made: LeBron vs. Jordan",
+        xlab = "Player", ylab = "Field Goals Made", col = c("red", "purple"))
+
+summary(lebron$fg)
+sum(lebron$fg)
+mean(lebron$fg)
+
+summary(jordan$fg)
+sum(jordan$fg)
+mean(jordan$fg)
+
+
+#Field Goals Attempted
+combined_data = data.frame(
+  fga = c(lebron$fga, jordan$fga),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(fga ~ player, 
+        data = combined_data, 
+        main = "Comparison of Field Goals Attempted: LeBron vs. Jordan",
+        xlab = "Field Goals Attempted", 
+        ylab = "Game",
+        col = c("red", "purple"))
+
+summary(lebron$fga)
+sum(lebron$fga)
+mean(lebron$fga)
+
+summary(jordan$fga)
+sum(jordan$fga)
+mean(jordan$fga)
+
+#Three points attempted
+combined_data = data.frame(
+  threeatt = c(lebron$threeatt, jordan$threeatt),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(threeatt ~ player, 
+        data = combined_data, 
+        main = "Comparison of Three points Attempted: LeBron vs. Jordan",
+        xlab = "Three Point Goals Attempted", 
+        ylab = "Game",
+        col = c("red", "purple"))
+
+summary(lebron$threeatt)
+sum(lebron$threeatt)
+mean(lebron$threeatt)
+
+summary(jordan$threeatt)
+sum(jordan$threeatt)
+mean(jordan$threeatt)
+
+#Three point %
+combined_data = data.frame(
+  threep = c(lebron$threep, jordan$threep),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(threep ~ player, 
+        data = combined_data, 
+        main = "Comparison of Three points %: LeBron vs. Jordan",
+        xlab = "Three Point Goals %", 
+        ylab = "Game",
+        col = c("red", "purple"))
+
+summary(lebron$threep)
+mean(lebron$threep, na.rm = TRUE)
+
+summary(jordan$threep)
+mean(jordan$threep, na.rm = TRUE)
+
+#Steals
+combined_data = data.frame(
+  stl = c(lebron$stl, jordan$stl),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(stl ~ player, 
+        data = combined_data, 
+        main = "Comparison of Steals: LeBron vs. Jordan",
+        xlab = "Steals", 
+        ylab = "Game",
+        col = c("red", "purple"))
+summary(lebron$stl)
+sum(lebron$stl)
+mean(lebron$stl)
+
+summary(jordan$stl)
+sum(jordan$stl)
+mean(jordan$stl)
+
+#Blocks
+combined_data = data.frame(
+  blk = c(lebron$blk, jordan$blk),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(blk ~ player, 
+        data = combined_data, 
+        main = "Comparison of Blocks: LeBron vs. Jordan",
+        xlab = "Blocks", 
+        ylab = "Game",
+        col = c("red", "purple"))
+
+summary(lebron$blk)
+sum(lebron$blk)
+mean(lebron$blk)
+
+summary(jordan$blk)
+sum(jordan$blk)
+mean(jordan$blk)
+
+#Turnovers
+combined_data = data.frame(
+  tov = c(lebron$tov, jordan$tov),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(tov ~ player, 
+        data = combined_data, 
+        main = "Comparison of Turnovers: LeBron vs. Jordan",
+        xlab = "Turnovers", 
+        ylab = "Game",
+        col = c("red", "purple"))
+summary(lebron$tov)
+sum(lebron$tov)
+mean(lebron$tov)
+
+summary(jordan$tov)
+sum(jordan$tov)
+mean(jordan$tov)
+
+#Free Throw %
+combined_data = data.frame(
+  ftp = c(lebron$ftp, jordan$ftp),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(ftp ~ player, 
+        data = combined_data, 
+        main = "Comparison of Free Throw %: LeBron vs. Jordan",
+        xlab = "Free Throw %", 
+        ylab = "Game",
+        col = c("red", "purple"))
+
+summary(lebron$ftp)
+mean(lebron$ftp, na.rm = TRUE)
+
+summary(jordan$ftp)
+mean(jordan$ftp, na.rm = TRUE)
+
+#Point Differental
+combined_data = data.frame(
+  point_diff = c(lebron$point_diff, jordan$point_diff),
+  player = c("Lebron","Jordan")
+)
+
+# Create the box plot
+boxplot(point_diff ~ player, 
+        data = combined_data, 
+        main = "Comparison of Point Differental: LeBron vs. Jordan",
+        xlab = "Point Differental", 
+        ylab = "Game",
+        col = c("red", "purple"))
+summary(lebron$point_diff)
+mean(lebron$point_diff)
+
+summary(jordan$point_diff)
+mean(jordan$point_diff)
+
+
+#Part 2 Question 1: Scoring Eff
+lebron_pts = c()
+
+for(i in 1:nrow(lebron)){
+  if ((lebron[i,"fga"] + lebron[i,"fta"]) > 0){
+    eff = lebron[i,"pts"]/(lebron[i,"fga"] + lebron[i,"fta"])
+    print(eff)
+  }
+  else{
+    eff = NA
+  }
+  lebron_pts = append(lebron_pts,eff)
+}
+
+print(lebron_pts)
+
+jordan_pts = c()
+
+for(i in 1:nrow(jordan)){
+  if ((jordan[i,"fga"] + jordan[i,"fta"]) > 0){
+    eff = jordan[i,"pts"]/(jordan[i,"fga"] + jordan[i,"fta"])
+    print(eff)
+  }
+  else{
+    eff = NA
+  }
+  jordan_pts = append(jordan_pts,eff)
+}
+
+print(jordan_pts)
+
+t.test(lebron_pts,jordan_pts)
+
+#Part 2 Question 2: Game Score Correlation
+correlation <- cor(jordan$game_score, jordan$point_diff)
+print(correlation)
+cor.test(jordan$game_score, jordan$point_diff)
+
+plot(jordan$game_score, jordan$point_diff, 
+     main = "Game Score vs Point Difference for Jordan", 
+     xlab = "Game Score", 
+     ylab = "Point Differental",
+     pch = 19)
+
+
+correlation1 <- cor(lebron$game_score, lebron$point_diff)
+print(correlation1)
+cor.test(lebron$game_score, lebron$point_diff)
+
+plot(lebron$game_score, lebron$point_diff, 
+     main = "Game Score vs Point Difference for Jordan", 
+     xlab = "Game Score", 
+     ylab = "Point Differental",
+     pch = 19)
+
+#Part 2 Question 3: Point Differental Correlation
+#LeBron
+full =lm(lebron$point_diff ~ (lebron$pts + lebron$ast  + lebron$stl  + lebron$blk + lebron$tov  + lebron$trb)^2)
+mod.final = step(full)
+summary(mod.final)
+#Jordan
+full1 =lm(jordan$point_diff ~ (jordan$pts +jordan$ast  +jordan$stl  + jordan$blk + jordan$tov  + jordan$trb)^2)
+mod.final1 = step(full1)
+summary(mod.final1)
+
